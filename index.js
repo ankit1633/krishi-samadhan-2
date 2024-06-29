@@ -70,4 +70,7 @@ app.listen(PORT, () => {
 defaultData();
 
 // Export the app for testing or potential future use
-export { app };
+export default (req, res) => {
+  // Ensure app is prepared for each request
+  app(req, res);
+};
